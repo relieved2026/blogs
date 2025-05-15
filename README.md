@@ -2,9 +2,9 @@
 
 一个充满极客风格的个人网站模板，具有终端界面元素和现代化设计。完美展示开发者的项目、技能和作品集。
 
-<!-- 请将下面URL中的"123xiao/geek-dev-personal-site"替换为你自己的GitHub仓库 -->
+<!-- 点击下方按钮前往Cloudflare Pages官网 -->
 
-[![部署到Cloudflare Pages](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/123xiao/geek-dev-personal-site)
+[![部署到Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-部署-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 
 ## 在线预览
 
@@ -75,43 +75,68 @@ const websiteConfig = {
 
 ## 部署
 
-### 方法 1：一键部署到 Cloudflare Pages
+### 方法 1：使用 Cloudflare Pages 部署
 
-<!-- 请将下面URL中的"123xiao/geek-dev-personal-site"替换为你自己的GitHub仓库 -->
+<!-- 点击下方按钮前往Cloudflare Pages官网 -->
 
-[![部署到Cloudflare Pages](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/123xiao/geek-dev-personal-site)
+[![部署到Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-部署-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 
-1. 点击上方"部署到 Cloudflare Pages"按钮
-2. 登录你的 Cloudflare 账户（如果需要注册，请先注册）
-3. Cloudflare 会自动从 GitHub 导入项目
-4. 配置部署选项：
+1. 点击上方"部署到 Cloudflare Pages"按钮前往 Cloudflare Pages 官网
+2. 点击"Sign up"注册账户或"Log in"登录现有账户
+3. 登录后，在 Cloudflare 仪表板中导航到"Pages"部分
+4. 点击"创建应用程序"按钮
+5. 选择"连接到 Git"选项
+6. 授权 Cloudflare 访问你的 GitHub 账户（如果尚未授权）
+7. 选择包含此项目的仓库（或先 fork 到你的 GitHub 账户再选择）
+8. 配置部署选项：
    - 项目名称：输入你喜欢的名称
    - 生产分支：main（或 master）
    - 构建命令：留空
    - 构建输出目录：留空
-5. 点击"保存并部署"
-6. 部署完成后，你可以在 Cloudflare Dashboard 中为网站配置自定义域名
+9. 点击"保存并部署"
+10. 等待部署完成，Cloudflare 将自动为你的网站分配一个域名（通常是 `项目名.pages.dev`）
+11. （可选）在 Cloudflare Dashboard 中为你的网站配置自定义域名
 
-### 方法 2：手动部署到 Cloudflare Pages
+### 方法 2：使用 GitHub Pages 部署
 
-1. 在 Cloudflare 仪表板中，进入 Pages 部分
-2. 点击"创建项目"按钮，选择"连接到 Git"
-3. 连接你的 GitHub/GitLab 账户并授权 Cloudflare
-4. 选择此项目的仓库
-5. 部署设置中：
-   - 构建命令：留空
-   - 构建输出目录：留空或填写 `/`
-6. 点击"保存并部署"
+<!-- 点击下方按钮前往GitHub Pages文档 -->
 
-### 方法 3：部署到任何静态网站托管服务
+[![部署到GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-部署-181717?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
+
+1. 将项目代码推送到你的 GitHub 仓库
+
+   ```bash
+   git add .
+   git commit -m "准备部署到GitHub Pages"
+   git push origin main
+   ```
+
+2. 在 GitHub 仓库页面，点击"Settings"（设置）选项卡
+3. 在左侧导航栏中，找到并点击"Pages"选项
+4. 在"Source"（源）部分，选择以下选项：
+   - Branch（分支）：main（或 master）
+   - Folder（文件夹）：/ (root)
+   - 点击"Save"（保存）按钮
+5. 等待几分钟，GitHub 会自动构建并部署你的网站
+6. 部署完成后，GitHub 会在页面顶部显示你的网站 URL（通常是`https://你的用户名.github.io/仓库名/`）
+7. （可选）配置自定义域名：
+   - 在 GitHub Pages 设置页面的"Custom domain"（自定义域名）部分，输入你的域名
+   - 在你的 DNS 服务商处，添加一条指向`你的用户名.github.io`的 CNAME 记录
+   - 等待 DNS 变更生效（可能需要几小时）
+   - 勾选"Enforce HTTPS"（强制启用 HTTPS）选项以启用安全连接
+
+注意：GitHub Pages 已自动支持 404.html 页面，无需额外配置即可使用本项目的自定义 404 页面。
+
+### 方法 3：部署到其他静态网站托管服务
 
 由于这是一个纯静态网站，你可以将其部署到任何提供静态网站托管的服务，如：
 
-- GitHub Pages
 - Netlify
 - Vercel
 - Firebase Hosting
 - Amazon S3
+- Render
+- Digital Ocean App Platform
 
 只需上传所有文件到对应的托管服务即可。
 
