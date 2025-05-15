@@ -461,7 +461,7 @@ function setupContactForm() {
 
       // 模拟表单提交
       alert(
-        `感谢您的消息！\n姓名: ${name}\n邮箱: ${email}\n主题: ${subject}\n消息: ${message}\n\n在真实环境中，这将发送到服务器进行处理。`
+        `感谢您的消息！\n姓名: ${name}\n邮箱: ${email}\n主题: ${subject}\n消息: ${message}\n\n`
       );
 
       // 重置表单
