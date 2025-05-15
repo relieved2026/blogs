@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>无名键客 | GEEK_DEV</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <span class="terminal-prompt">$</span>
+          <span class="logo-text">GEEK_DEV</span><span class="cursor">_</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#home"><i class="fas fa-home"></i><span>首页</span></a>
+          </li>
+          <li>
+            <a href="#about"
+              ><i class="fas fa-user-alt"></i><span>关于我</span></a
+            >
+          </li>
+          <li>
+            <a href="#skills-section"
+              ><i class="fas fa-code"></i><span>技能</span></a
+            >
+          </li>
+          <li>
+            <a href="#github-repos"
+              ><i class="fab fa-github"></i><span>GitHub</span></a
+            >
+          </li>
+          <li>
+            <a href="#projects"
+              ><i class="fas fa-project-diagram"></i><span>作品</span></a
+            >
+          </li>
+          <li>
+            <a href="#blog"><i class="fas fa-blog"></i><span>博客</span></a>
+          </li>
+          <li>
+            <a href="#contact"
+              ><i class="fas fa-envelope"></i><span>联系方式</span></a
+            >
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 首页区域 -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="terminal-button close"></span>
+              <span class="terminal-button minimize"></span>
+              <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">user@geek-terminal:~</div>
+          </div>
+          <div class="terminal-content">
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-text">whoami</span>
+            </div>
+            <div class="terminal-output" id="dev-name">全栈开发者</div>
+
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-text">cat skills.txt</span>
+            </div>
+            <div class="terminal-output">
+              <span id="skills"
+                >[ 'JavaScript', 'Python', 'React', 'Node.js', 'DevOps' ]</span
+              >
+            </div>
+
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-text">./show_status.sh</span>
+            </div>
+            <div class="terminal-output status-output">
+              <div id="status-message">目前正在寻找挑战性项目和创新机会...</div>
+            </div>
+
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-text typing-animation">_</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于我区域 -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="hash">#</span> 关于我 <span class="blink">_</span>
+        </h2>
+        <div class="about-content">
+          <div class="profile-image">
+            <div class="image-container">
+              <img
+                id="profile-img"
+                src="https://avatars.githubusercontent.com/u/17847207?v=4"
+                alt="个人照片"
+              />
+              <div class="image-glitch"></div>
+            </div>
+          </div>
+          <div class="about-text">
+            <div class="code-block">
+              <pre><code>
+/**
+ * 关于我
+ * @author 无名键客
+ * @version 1.0.0
+ */
+const developer = {
+  name: "<span id="name">无名键客</span>",
+  title: "<span id="title">全栈开发工程师</span>",
+  location: "<span id="location">深圳, 中国</span>",
+  education: "<span id="education">计算机科学与技术学士</span>",
+  interests: [
+    "Web开发", 
+    "开源项目", 
+    "人工智能", 
+    "逆向破解"，
+    "网络攻防"
+
+  ],
+  experience: "<span id="experience">5年+</span>",
+  
+  currentFocus() {
+    return "构建可扩展的Web应用";
+  },
+  
+  contactMe() {
+    // 查看页面底部联系方式
+    scrollToContact();
+  }
+};
+                        </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能区域 -->
+    <section id="skills-section" class="skills">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="hash">#</span> 技能 <span class="blink">_</span>
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>前端开发</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <span class="skill-name">HTML/CSS</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 95%">95%</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%">90%</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">React</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%">85%</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Vue.js</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%">80%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>后端开发</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <span class="skill-name">Java</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 99%">99%</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Node.js</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 88%">88%</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Python</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%">85%</div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <span class="skill-name">SQL</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%">80%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>开发工具</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <span class="skill-name">Git</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 92%">92%</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Docker</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 78%">78%</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">CI/CD</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%">70%</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Linux</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%">85%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub置顶项目区域 -->
+    <section id="github-repos" class="github-repos">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="hash">#</span> GitHub置顶项目
+          <span class="blink">_</span>
+        </h2>
+
+        <div class="github-header">
+          <div class="github-profile">
+            <div class="github-avatar">
+              <img
+                id="github-avatar"
+                src="https://avatars.githubusercontent.com/u/17847207?v=4"
+                alt="GitHub头像"
+              />
+            </div>
+            <div class="github-info">
+              <h3 id="github-name">无名键客</h3>
+              <p id="github-username">123xiao</p>
+            </div>
+          </div>
+          <a
+            href="#"
+            id="github-follow"
+            class="github-follow-btn"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i> Follow
+          </a>
+        </div>
+
+        <div class="github-repos-grid">
+          <!-- 这里将通过JavaScript动态加载GitHub置顶项目 -->
+        </div>
+
+        <div class="github-footer">
+          <a href="#" id="github-profile-link" class="btn" target="_blank"
+            >查看我的GitHub主页 <i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 作品区域 -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="hash">#</span> 作品展示 <span class="blink">_</span>
+        </h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="folder-icon">
+                <i class="fas fa-folder"></i>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <h3 class="project-title">智能任务管理系统</h3>
+            <p class="project-description">
+              使用React和Node.js构建的任务管理平台，具有AI辅助功能，帮助用户更高效地组织工作。
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>TensorFlow.js</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <div class="folder-icon">
+                <i class="fas fa-folder"></i>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <h3 class="project-title">区块链投票系统</h3>
+            <p class="project-description">
+              基于以太坊的去中心化投票平台，确保投票过程透明且不可篡改。
+            </p>
+            <div class="project-tech">
+              <span>Solidity</span>
+              <span>Web3.js</span>
+              <span>React</span>
+              <span>Truffle</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <div class="folder-icon">
+                <i class="fas fa-folder"></i>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <h3 class="project-title">实时协作编辑器</h3>
+            <p class="project-description">
+              支持多人同时编辑的在线代码编辑平台，类似VS
+              Code的Web版本，内置Git集成。
+            </p>
+            <div class="project-tech">
+              <span>WebSockets</span>
+              <span>Vue.js</span>
+              <span>Express</span>
+              <span>Monaco Editor</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <div class="folder-icon">
+                <i class="fas fa-folder"></i>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <h3 class="project-title">数据可视化仪表板</h3>
+            <p class="project-description">
+              为企业提供实时数据分析和可视化的平台，支持自定义仪表板和图表。
+            </p>
+            <div class="project-tech">
+              <span>D3.js</span>
+              <span>Angular</span>
+              <span>Python</span>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+        <div class="more-projects">
+          <a href="#" class="btn"
+            >查看更多项目 <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 博客区域 -->
+    <section id="blog" class="blog">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="hash">#</span> 最新博客 <span class="blink">_</span>
+        </h2>
+        <div class="blog-posts">
+          <div class="blog-post">
+            <div class="post-date">
+              <span class="day">15</span>
+              <span class="month">六月</span>
+              <span class="year">2023</span>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title">WebAssembly: 网页应用的未来</h3>
+              <p class="post-excerpt">
+                探索WebAssembly如何让浏览器运行高性能应用，以及它将如何改变Web开发的未来...
+              </p>
+              <div class="post-tags">
+                <span>WebAssembly</span>
+                <span>前端</span>
+                <span>性能优化</span>
+              </div>
+              <a href="#" class="read-more"
+                >阅读全文 <i class="fas fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="blog-post">
+            <div class="post-date">
+              <span class="day">28</span>
+              <span class="month">五月</span>
+              <span class="year">2023</span>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title">零知识证明在区块链中的应用</h3>
+              <p class="post-excerpt">
+                深入探讨零知识证明技术如何保护区块链交易的隐私性，同时不牺牲安全性和透明度...
+              </p>
+              <div class="post-tags">
+                <span>区块链</span>
+                <span>隐私</span>
+                <span>加密技术</span>
+              </div>
+              <a href="#" class="read-more"
+                >阅读全文 <i class="fas fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="blog-post">
+            <div class="post-date">
+              <span class="day">10</span>
+              <span class="month">五月</span>
+              <span class="year">2023</span>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title">微服务架构：从理论到实践</h3>
+              <p class="post-excerpt">
+                分享我在将单体应用重构为微服务架构过程中的经验和教训，以及相关技术选型...
+              </p>
+              <div class="post-tags">
+                <span>微服务</span>
+                <span>架构设计</span>
+                <span>DevOps</span>
+              </div>
+              <a href="#" class="read-more"
+                >阅读全文 <i class="fas fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="more-posts">
+          <a href="#" class="btn"
+            >浏览所有文章 <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系区域 -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="hash">#</span> 联系我 <span class="blink">_</span>
+        </h2>
+        <div class="contact-content">
+          <div class="contact-text">
+            <p>
+              如果您有任何项目合作、技术交流或工作机会，欢迎通过以下方式联系我：
+            </p>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span id="email">your.email@example.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <a href="#" id="github">github.com/yourusername</a>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <a href="#" id="linkedin">linkedin.com/in/yourname</a>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-weixin"></i>
+                <span id="wechat">YourWeChatID</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="text" id="contact-name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">邮箱</label>
+                <input type="email" id="contact-email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">主题</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">消息</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-submit">
+                发送消息 <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="terminal-prompt">$</span>
+            <span class="logo-text">GEEK_DEV</span><span class="cursor">_</span>
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-weixin"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="current-year">2023</span>
+            <span id="footer-name">无名键客</span>. 保留所有权利.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 鼠标跟随效果 -->
+    <div class="cursor-follower"></div>
+
+    <!-- 配置文件 -->
+    <script src="config.js"></script>
+    <!-- 主脚本 -->
+    <script src="script.js"></script>
+  </body>
+</html>

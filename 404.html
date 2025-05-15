@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - 页面未找到</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* 404页面特定样式 */
+      .error-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .error-terminal {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: var(--card-bg-color);
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+        border: 1px solid rgba(0, 255, 0, 0.2);
+        overflow: hidden;
+      }
+
+      .error-code {
+        font-size: 8rem;
+        font-weight: bold;
+        font-family: var(--font-mono);
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        position: relative;
+      }
+
+      .error-code::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 20px;
+        height: 100%;
+        background: var(--primary-color);
+        animation: blink 1s infinite;
+      }
+
+      .error-message {
+        font-family: var(--font-mono);
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3.5s steps(40, end);
+      }
+
+      .error-content {
+        padding: 2rem;
+      }
+
+      .error-actions {
+        margin-top: 2rem;
+      }
+
+      .error-actions .btn {
+        margin: 0 10px;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <span class="terminal-prompt">$</span>
+          <span class="logo-text">GEEK_DEV</span><span class="cursor">_</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html#home"
+              ><i class="fas fa-home"></i><span>首页</span></a
+            >
+          </li>
+          <li>
+            <a href="index.html#about"
+              ><i class="fas fa-user-alt"></i><span>关于我</span></a
+            >
+          </li>
+          <li>
+            <a href="index.html#skills-section"
+              ><i class="fas fa-code"></i><span>技能</span></a
+            >
+          </li>
+          <li>
+            <a href="index.html#github-repos"
+              ><i class="fab fa-github"></i><span>GitHub</span></a
+            >
+          </li>
+          <li>
+            <a href="index.html#projects"
+              ><i class="fas fa-project-diagram"></i><span>作品</span></a
+            >
+          </li>
+          <li>
+            <a href="index.html#blog"
+              ><i class="fas fa-blog"></i><span>博客</span></a
+            >
+          </li>
+          <li>
+            <a href="index.html#contact"
+              ><i class="fas fa-envelope"></i><span>联系方式</span></a
+            >
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 404错误内容区域 -->
+    <section class="error-container">
+      <div class="container">
+        <div class="error-terminal">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="terminal-button close"></span>
+              <span class="terminal-button minimize"></span>
+              <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">error@geek-terminal:~</div>
+          </div>
+          <div class="terminal-content error-content">
+            <div class="error-code">404</div>
+            <div class="error-message">页面未找到 | Page Not Found</div>
+
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-text">find / -name requested-page</span>
+            </div>
+            <div class="terminal-output">
+              找不到请求的页面。该页面可能已被移动、删除或不存在。
+            </div>
+
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-text">cd /home</span>
+            </div>
+
+            <div class="error-actions">
+              <a href="index.html" class="btn">
+                <i class="fas fa-home"></i> 返回首页
+              </a>
+              <a href="javascript:history.back()" class="btn">
+                <i class="fas fa-arrow-left"></i> 返回上一页
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="terminal-prompt">$</span>
+            <span class="logo-text">GEEK_DEV</span><span class="cursor">_</span>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="current-year">2023</span>
+            <span id="footer-name">无名键客</span>. 保留所有权利.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 鼠标跟随效果 -->
+    <div class="cursor-follower"></div>
+
+    <!-- 配置文件 -->
+    <script src="config.js"></script>
+    <!-- 主脚本 -->
+    <script src="script.js"></script>
+  </body>
+</html>
