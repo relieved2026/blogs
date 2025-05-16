@@ -644,83 +644,83 @@ function setupDevToolsDetection() {
     }
   });
 
-  // 使用多种方法检测开发者工具
-  // 方法1：检测窗口大小变化（当开发者工具打开时，常会改变窗口大小）
-  let devToolsOpened = false;
-  const threshold = 160;
-  const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-  const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+  // // 使用多种方法检测开发者工具
+  // // 方法1：检测窗口大小变化（当开发者工具打开时，常会改变窗口大小）
+  // let devToolsOpened = false;
+  // const threshold = 160;
+  // const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+  // const heightThreshold = window.outerHeight - window.innerHeight > threshold;
 
-  if (widthThreshold || heightThreshold) {
-    if (!devToolsOpened) {
-      devToolsOpened = true;
-      activateHackerEffect();
-    }
-  }
+  // if (widthThreshold || heightThreshold) {
+  //   if (!devToolsOpened) {
+  //     devToolsOpened = true;
+  //     activateHackerEffect();
+  //   }
+  // }
 
-  // 方法2：定时检测窗口属性
-  setInterval(function () {
-    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+  // // 方法2：定时检测窗口属性
+  // setInterval(function () {
+  //   const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+  //   const heightThreshold = window.outerHeight - window.innerHeight > threshold;
 
-    if (widthThreshold || heightThreshold) {
-      if (!devToolsOpened) {
-        devToolsOpened = true;
-        activateHackerEffect();
-      }
-    } else {
-      devToolsOpened = false;
-    }
-  }, 1000);
+  //   if (widthThreshold || heightThreshold) {
+  //     if (!devToolsOpened) {
+  //       devToolsOpened = true;
+  //       activateHackerEffect();
+  //     }
+  //   } else {
+  //     devToolsOpened = false;
+  //   }
+  // }, 1000);
 
-  // 方法3：通过devtools事件检测 (仅Chrome)
-  if (typeof window.chrome !== "undefined") {
-    const devtools = {
-      isOpen: false,
-      orientation: undefined,
-    };
+  // // 方法3：通过devtools事件检测 (仅Chrome)
+  // if (typeof window.chrome !== "undefined") {
+  //   const devtools = {
+  //     isOpen: false,
+  //     orientation: undefined,
+  //   };
 
-    // 检测 DevTools 方向变化
-    const emitEvent = (isOpen, orientation) => {
-      if (isOpen && !devtools.isOpen) {
-        activateHackerEffect();
-      }
+  //   // 检测 DevTools 方向变化
+  //   const emitEvent = (isOpen, orientation) => {
+  //     if (isOpen && !devtools.isOpen) {
+  //       activateHackerEffect();
+  //     }
 
-      devtools.isOpen = isOpen;
-      devtools.orientation = orientation;
-    };
+  //     devtools.isOpen = isOpen;
+  //     devtools.orientation = orientation;
+  //   };
 
-    // 检测devtools的打开状态
-    const main = ({ emitEvents = true } = {}) => {
-      const threshold = 160;
-      const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-      const heightThreshold =
-        window.outerHeight - window.innerHeight > threshold;
-      const orientation = widthThreshold ? "vertical" : "horizontal";
+  //   // 检测devtools的打开状态
+  //   const main = ({ emitEvents = true } = {}) => {
+  //     const threshold = 160;
+  //     const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+  //     const heightThreshold =
+  //       window.outerHeight - window.innerHeight > threshold;
+  //     const orientation = widthThreshold ? "vertical" : "horizontal";
 
-      if (
-        !(heightThreshold && widthThreshold) &&
-        ((window.Firebug &&
-          window.Firebug.chrome &&
-          window.Firebug.chrome.isInitialized) ||
-          widthThreshold ||
-          heightThreshold)
-      ) {
-        if (emitEvents) {
-          emitEvent(true, orientation);
-        }
-        return true;
-      }
+  //     if (
+  //       !(heightThreshold && widthThreshold) &&
+  //       ((window.Firebug &&
+  //         window.Firebug.chrome &&
+  //         window.Firebug.chrome.isInitialized) ||
+  //         widthThreshold ||
+  //         heightThreshold)
+  //     ) {
+  //       if (emitEvents) {
+  //         emitEvent(true, orientation);
+  //       }
+  //       return true;
+  //     }
 
-      if (emitEvents) {
-        emitEvent(false, undefined);
-      }
-      return false;
-    };
+  //     if (emitEvents) {
+  //       emitEvent(false, undefined);
+  //     }
+  //     return false;
+  //   };
 
-    window.addEventListener("resize", main);
-    main();
-  }
+  //   window.addEventListener("resize", main);
+  //   main();
+  // }
 
   // 方法4: 添加控制台警告消息
   consoleWarning();
