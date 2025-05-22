@@ -67,6 +67,29 @@ const websiteConfig = {
       demoUrl: "",
       topics: ["javascript", "html5", "css3", "Chrome插件"],
     },
+    {
+      name: "Cloudflare-SQL-to-API",
+      description:
+        "这是一个基于 Cloudflare Workers 和 D1 数据库的应用，可以通过编写 SQL 查询快速创建 REST API 接口。",
+      language: "Vue",
+      languageColor: "#f1e05a",
+      stars: 49,
+      forks: 9,
+      repoUrl: "https://github.com/123xiao/Cloudflare-SQL-to-API",
+      demoUrl: "",
+      topics: [" Element Plus", "Nuxt 3", "Vue 3", "D1 数据库"],
+    },
+    {
+      name: "geek-dev-personal-site",
+      description: "GEEK_DEV 个人极客风格网站",
+      language: "html",
+      languageColor: "#f1e05a",
+      stars: 8,
+      forks: 3,
+      repoUrl: "https://github.com/123xiao/geek-dev-personal-site",
+      demoUrl: "",
+      topics: [" Element Plus", "Nuxt 3", "Vue 3", "D1 数据库"],
+    },
   ],
 
   // 技能列表（首页终端显示）
@@ -155,7 +178,14 @@ const websiteConfig = {
       description: "一个基于Cloudflare Workers的聚合消息推送系统",
       technologies: [],
       githubUrl: "#",
-      liveUrl: "http://push.123408.xyz",
+      liveUrl: "https://push.123408.xyz",
+    },
+    {
+      title: "SQL to API 管理平台",
+      description: "基于Cloudflare Workers和D1数据库的SQL转API工具",
+      technologies: [],
+      githubUrl: "https://github.com/123xiao/Cloudflare-SQL-to-API",
+      liveUrl: "https://123406.xyz",
     },
   ],
 
