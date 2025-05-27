@@ -35,6 +35,18 @@ const websiteConfig = {
       topics: ["react", "node", "Next", "DaisyUI"],
     },
     {
+      name: "Cloudflare-SQL-to-API",
+      description:
+        "这是一个基于 Cloudflare Workers 和 D1 数据库的应用，可以通过编写 SQL 查询快速创建 REST API 接口。",
+      language: "Vue",
+      languageColor: "#f1e05a",
+      stars: 126,
+      forks: 16,
+      repoUrl: "https://github.com/123xiao/Cloudflare-SQL-to-API",
+      demoUrl: "",
+      topics: [" Element Plus", "Nuxt 3", "Vue 3", "D1 数据库"],
+    },
+    {
       name: "remote-log-viewer",
       description: "远程服务器日志查询工具",
       language: "JavaScript",
@@ -67,18 +79,7 @@ const websiteConfig = {
       demoUrl: "",
       topics: ["javascript", "html5", "css3", "Chrome插件"],
     },
-    {
-      name: "Cloudflare-SQL-to-API",
-      description:
-        "这是一个基于 Cloudflare Workers 和 D1 数据库的应用，可以通过编写 SQL 查询快速创建 REST API 接口。",
-      language: "Vue",
-      languageColor: "#f1e05a",
-      stars: 49,
-      forks: 9,
-      repoUrl: "https://github.com/123xiao/Cloudflare-SQL-to-API",
-      demoUrl: "",
-      topics: [" Element Plus", "Nuxt 3", "Vue 3", "D1 数据库"],
-    },
+
     {
       name: "geek-dev-personal-site",
       description: "GEEK_DEV 个人极客风格网站",
