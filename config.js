@@ -239,7 +239,7 @@ const websiteConfig = {
   },
 
   // 个人照片URL（可以替换为您自己的照片链接）
-  profileImage: "head.png",
+  profileImage: "head_min.png",
 
   // 版权信息
   copyright: {
