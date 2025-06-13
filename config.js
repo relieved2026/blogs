@@ -239,7 +239,7 @@ const websiteConfig = {
   },
 
   // 个人照片URL（可以替换为您自己的照片链接）
-  profileImage: "https://avatars.githubusercontent.com/u/17847207?v=4",
+  profileImage: "head.png",
 
   // 版权信息
   copyright: {
