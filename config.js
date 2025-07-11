@@ -10,7 +10,7 @@ const websiteConfig = {
     title: "全栈开发工程师",
     devName: "全栈开发者", // 首页终端显示的名称
     location: "深圳, 中国",
-    email: "codecoming@163.com",
+    email: "mysql@linux.do",
     github: "github.com/123xiao",
     githubUrl: "https://github.com/123xiao",
     linkedin: "#",
