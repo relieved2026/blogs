@@ -6,18 +6,18 @@
 const websiteConfig = {
   // 基本信息
   basics: {
-    name: "无名键客",
-    title: "全栈开发工程师",
-    devName: "全栈开发者", // 首页终端显示的名称
-    location: "深圳, 中国",
-    email: "mysql@linux.do",
-    github: "github.com/123xiao",
-    githubUrl: "https://github.com/123xiao",
+    name: "小小博客",
+    title: "运维工程师",
+    devName: "运维开发者", // 首页终端显示的名称
+    location: "东莞, 中国",
+    email: "admin@891123.xyz",
+    github: "github.com/relieved2026",
+    githubUrl: "https://github.com/relieved2026",
     linkedin: "#",
     linkedinUrl: "#",
     wechat: "#",
     status: "目前正在寻找挑战性项目和创新机会...", // 首页状态消息
-    education: "计算机科学与技术学士",
+    education: "计算机科学与技术",
     experience: "10年+",
   },
 
@@ -119,7 +119,7 @@ const websiteConfig = {
   },
 
   // 兴趣爱好
-  interests: ["Web开发", "开源项目", "人工智能", "Web逆向"],
+  interests: ["Web开发", "开源项目", "人工智能", "网络运维"],
 
   // 项目列表
   projects: [
@@ -232,7 +232,7 @@ const websiteConfig = {
 
   // 社交媒体链接
   socialLinks: {
-    github: "https://github.com/123xiao",
+    github: "https://github.com/relieved2026",
     twitter: "#",
     linkedin: "#",
     weixin: "#",
@@ -244,6 +244,6 @@ const websiteConfig = {
   // 版权信息
   copyright: {
     year: new Date().getFullYear(),
-    name: "无名键客",
+    name: "小小博客",
   },
 };
